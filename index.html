@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head><title>Launch Learning App</title></head>
-<body>
-  <a href="intent://inclass#Intent;scheme=learningapp;package=com.DefaultCompany.ATHOME;end;">Open App via Intent</a>
+<head>
+    <title>Open App</title>
+    <script type="text/javascript">
+        function openApp() {
+            var appLink = 'learningapp://inclass';
+            var iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = appLink;
+            document.body.appendChild(iframe);
+            setTimeout(function() {
+            }, 2000); // 2 seconds delay
+        }
+    </script>
+</head>
+<body onload="openApp()">
 </body>
 </html>
